@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/dynamsoft-camera-enhancer@2.1.0/dist/dce.js"></script>
     <title>test</title>
 </head>
 <body>
+    <h1> blah blah blah </h1>
     <div id="enhancerUIContainer" style="height: 100vh;"></div>
 
 
-    <script src="https://unpkg.com/dynamsoft-camera-enhancer@2.1.0/dist/dce.js">
-         let enhancer = null;
+    <script>
+        let enhancer = null;
         (async () => {
             enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
             document.getElementById("enhancerUIContainer").appendChild(enhancer.getUIElement());
             await enhancer.open(true);
         })();
-
     </script>
 </body>
 </html>
